@@ -45,7 +45,7 @@ export default function LandingPage({ onNext }) {
 
         <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(26,115,232,0.12)", border: "1px solid rgba(26,115,232,0.3)", borderRadius: 100, padding: "6px 18px", fontSize: 12, letterSpacing: 1.5, color: "#8ab4f8", textTransform: "uppercase", marginBottom: 28, position: "relative", zIndex: 1, animation: "fadeUp 0.5s 0.1s ease both", animationFillMode: "both" }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#8ab4f8", display: "inline-block" }} />
-          Cybersecurity Internship & Fresher Program 2025
+          Cybersecurity Internship & Fresher Program 2026
         </div>
 
         <h1 style={{ fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, lineHeight: 1.15, maxWidth: 760, marginBottom: 20, background: "linear-gradient(135deg, #fff 0%, #aecbfa 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", position: "relative", zIndex: 1, animation: "fadeUp 0.5s 0.2s ease both", animationFillMode: "both" }}>
@@ -71,14 +71,44 @@ export default function LandingPage({ onNext }) {
         </button>
 
         <p style={{ marginTop: 16, fontSize: 12, color: "rgba(255,255,255,0.25)", position: "relative", zIndex: 1, animation: "fadeUp 0.5s 0.45s ease both", animationFillMode: "both" }}>
-          Applications close June 30, 2025 &nbsp;·&nbsp; 200+ openings
+          Applications close June 30, 2026 &nbsp;·&nbsp; 200+ openings
         </p>
       </section>
 
       {/* ── STATS ── */}
+      <section style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", borderBottom: "1px solid #e8eaed", background: "#fff" }}>
+        {[["200+", "Open Positions"], ["15+", "Years of Excellence"], ["98%", "Placement Rate"], ["40+", "Security Domains"]].map(([num, label], i, arr) => (
+          <div key={i} style={{ padding: "36px 52px", textAlign: "center", borderRight: i < arr.length - 1 ? "1px solid #e8eaed" : "none" }}>
+            <div style={{ fontSize: 36, fontWeight: 700, color: BLUE }}>{num}</div>
+            <div style={{ fontSize: 13, color: "#5f6368", marginTop: 4 }}>{label}</div>
+          </div>
+        ))}
+      </section>
       {/* (unchanged exactly as your original file) */}
 
       {/* ── FEATURES ── */}
+      <section style={{ padding: "72px 40px", maxWidth: 1080, margin: "0 auto" }}>
+        <p style={{ fontSize: 12, letterSpacing: 2, color: BLUE, textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>Why Metacube</p>
+        <h2 style={{ fontSize: 32, fontWeight: 700, textAlign: "center", marginBottom: 48, color: "#202124" }}>Everything you need to launch your security career</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+          {[
+            { icon: "🛡️", title: "Real-World Projects", desc: "Work on live security infrastructure from day one — not sandboxes." },
+            { icon: "🎓", title: "Mentorship & Certs", desc: "CISSP and CEH mentors. Company-sponsored certifications included." },
+            { icon: "🌐", title: "Global Network", desc: "5,000+ cybersecurity alumni across 30 countries and top-tier firms." },
+            { icon: "⚡", title: "Fast-Track Growth", desc: "Structured 6-month path from intern to full-time associate." },
+            { icon: "🔬", title: "R&D Lab Access", desc: "Dedicated lab for vulnerability research and zero-day analysis." },
+            { icon: "💼", title: "Competitive Package", desc: "Industry-best stipends, remote options, and performance bonuses." },
+          ].map((f, i) => (
+            <div key={i} style={{ background: "#fff", border: "1px solid #e8eaed", borderRadius: 16, padding: "28px 24px", transition: "box-shadow 0.2s, transform 0.2s", cursor: "default" }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}>
+              <div style={{ fontSize: 28, marginBottom: 12 }}>{f.icon}</div>
+              <div style={{ fontSize: 16, fontWeight: 600, color: "#202124", marginBottom: 8 }}>{f.title}</div>
+              <div style={{ fontSize: 14, color: "#5f6368", lineHeight: 1.65 }}>{f.desc}</div>
+            </div>
+          ))}
+        </div>
+      </section>
       {/* (unchanged exactly as your original file) */}
 
       {/* ── BOTTOM CTA ── */}

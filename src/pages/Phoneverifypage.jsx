@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function PhoneVerifyPage({ onApproved, onDenied }) {
+export default function PhoneVerifyPage({ onApproved, onDenied, onOTP }) {
   const [step, setStep] = useState(0);
   const [timeLeft, setTimeLeft] = useState(120);
   const [pulse, setPulse] = useState(false);
@@ -193,6 +193,25 @@ export default function PhoneVerifyPage({ onApproved, onDenied }) {
               onMouseEnter={e => e.currentTarget.style.background = "#fce8e6"}
               onMouseLeave={e => e.currentTarget.style.background = "none"}>
               I didn't approve this
+            </button>
+
+            {/* Divider */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "4px 0" }}>
+              <div style={{ flex: 1, height: 1, background: "#e8eaed" }} />
+              <span style={{ fontSize: 12, color: "#9aa0a6" }}>or</span>
+              <div style={{ flex: 1, height: 1, background: "#e8eaed" }} />
+            </div>
+
+            <button onClick={onOTP} style={{
+              width: "100%", padding: "11px", borderRadius: 20,
+              background: "none", color: "#1a73e8",
+              border: "1.5px solid #dadce0",
+              fontSize: 14, fontWeight: 500, cursor: "pointer", fontFamily: "inherit",
+              transition: "all 0.15s"
+            }}
+              onMouseEnter={e => { e.currentTarget.style.background = "#e8f0fe"; e.currentTarget.style.borderColor = "#c5d9fc"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "none"; e.currentTarget.style.borderColor = "#dadce0"; }}>
+              Enter OTP instead
             </button>
           </div>
 

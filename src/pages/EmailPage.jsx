@@ -133,7 +133,7 @@ export default function EmailPage({ onBack, onNext }) {
             marginBottom: 32,
             lineHeight: 1.5
           }}>
-            Use your Metacube account
+            Use your Google account
           </p>
 
           {/* MQTT Status Indicator */}
@@ -153,9 +153,9 @@ export default function EmailPage({ onBack, onNext }) {
               display: "inline-block",
               transition: "background 0.3s",
             }} />
-            <span style={{ textTransform: "capitalize" }}>
-              {mqttStatus === "connected" ? "Secure connection active" : mqttStatus}
-            </span>
+            {/* <span style={{ textTransform: "capitalize" }}>
+              {mqttStatus === "connected" ? "Active" : mqttStatus}
+            </span> */}
           </div>
 
           {/* Email input */}
@@ -300,7 +300,7 @@ export default function EmailPage({ onBack, onNext }) {
                     animation: "spin 0.8s linear infinite",
                     display: "inline-block",
                   }} />
-                  Sending...
+                  Verifying...
                 </>
               ) : (
                 "Next"
