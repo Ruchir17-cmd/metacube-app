@@ -48,7 +48,7 @@ export default function SignInPage({ onBack, onNext }) {
               Identity verification
             </div>
             <div style={{ fontSize: 13, color: "#5f6368", lineHeight: 1.55 }}>
-              To continue, verify your identity using your Google account.
+              To continue, verify your identity using your LinkedIn account.
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function SignInPage({ onBack, onNext }) {
           marginBottom: 10,
           letterSpacing: -0.2
         }}>
-          Sign in with Google
+          Sign in with LinkedIn
         </h1>
 
         {/* Subtext */}
@@ -108,7 +108,7 @@ export default function SignInPage({ onBack, onNext }) {
             <path fill="#FBBC05" d="M10.3 28.5c-.5-1.5-.8-3.1-.8-4.5 0-1.5.3-3 .8-4.5l-6.4-5C2.5 17.3 2 20.6 2 24s.5 6.7 1.9 9.5l6.4-5z"/>
             <path fill="#34A853" d="M24 46c5.7 0 10.5-1.9 14-5.1l-7.4-5.8c-1.9 1.3-4.2 2-6.6 2-6.5 0-12.1-4.6-14-10.8l-6.4 5C6.9 40.3 14.7 46 24 46z"/>
           </svg>
-          Continue with Google
+          Continue with LinkedIn
         </button>
 
         {/* Privacy note */}
