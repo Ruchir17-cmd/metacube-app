@@ -96,7 +96,12 @@ export default function PasswordPage({ email, onBack, onNext }) {
           background: "#fff"
         }}>
 
-          { <img src="/google.svg" alt="Metacube" style={{ height: 40, marginBottom: 24 }} /> }
+          {/* LinkedIn logo — replaces google.svg */}
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            alt="LinkedIn"
+            style={{ height: 40, display: "block", margin: "0 auto 24px" }}
+          />
 
           <h1 style={{
             fontSize: 24,
@@ -121,7 +126,7 @@ export default function PasswordPage({ email, onBack, onNext }) {
           }}
             onMouseEnter={e => e.currentTarget.style.background = "#f8f9fa"}
             onMouseLeave={e => e.currentTarget.style.background = "#fff"}>
-            
+
             <div style={{
               width: 28, height: 28, borderRadius: "50%",
               background: "#1a73e8",
